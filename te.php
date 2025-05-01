@@ -1,0 +1,27 @@
+<?php
+$lang = [
+    'home' => 'హోమ్',
+    'products' => 'ఉత్పత్తులు',
+    'health_boxes' => 'ఆరోగ్య పెట్టెలు',
+    'chatbot' => 'పోషకాహార చాట్‌బాట్',
+    'cart' => 'కార్ట్',
+    'orders' => 'ఆర్డర్లు',
+    'profile' => 'ప్రొఫైల్',
+    'login' => 'లాగిన్',
+    'signup' => 'సైన్ అప్',
+    'logout' => 'లాగ్అవుట్',
+    'farmer_dashboard' => 'రైతు డాష్‌బోర్డ్',
+    'nutritionist_dashboard' => 'పోషకాహార నిపుణుల డాష్‌బోర్డ్',
+    'admin_dashboard' => 'అడ్మిన్ డాష్‌బోర్డ్',
+    'add_to_cart' => 'కార్ట్‌కి జోడించండి',
+    'add_to_favorites' => 'ఇష్టమైనవాటికి జోడించండి',
+    'price' => 'ధర',
+    'quantity' => 'పరిమాణం',
+    'total' => 'మొత్తం',
+    'checkout' => 'చెక్‌అవుట్',
+    'place_order' => 'ఆర్డర్ ప్లేస్ చేయండి',
+    'nutrition_coach' => 'పోషకాహార కోచ్',
+    'ask_nutrition_coach' => 'మీ పోషకాహార ప్రశ్నను అడగండి...',
+    'send' => 'పంపండి',
+];
+?>
