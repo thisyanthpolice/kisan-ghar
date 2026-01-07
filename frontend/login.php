@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];

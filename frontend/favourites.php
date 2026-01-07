@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 if (!isLoggedIn()) {
     header('Location: login.php');
@@ -111,7 +111,7 @@ $favorite_health_boxes = $stmt->fetchAll();
 <script>
 async function removeFromFavorites(id, type) {
     try {
-        const response = await fetch('remove_from_favorites.php', {
+        const response = await fetch('../backend/remove_from_favorites.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id, type })
@@ -139,4 +139,3 @@ async function removeFromFavorites(id, type) {
 </script>
 
 <?php require_once 'footer.php';
-require_once 'sidebar.php';

@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 if (!isLoggedIn()) {
     header('Location: login.php');
@@ -43,7 +43,7 @@ $total = 0;
 
 <script>
 function removeFromCart(cartId) {
-    fetch('remove_from_cart.php', {
+    fetch('../backend/remove_from_cart.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cart_id: cartId })
@@ -52,4 +52,3 @@ function removeFromCart(cartId) {
 </script>
 
 <?php require_once 'footer.php';
-require_once 'sidebar.php';

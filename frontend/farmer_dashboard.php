@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 // Strict role check
 if (!isLoggedIn() || getUserRole() !== 'farmer') {
@@ -117,7 +117,7 @@ if (productForm) {
             price: document.getElementById('price').value
         };
         try {
-            const res = await fetch('add_product_ajax.php', {
+            const res = await fetch('../backend/add_product_ajax.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -137,7 +137,7 @@ if (productForm) {
 }
 function deleteProduct(id) {
     if (confirm('Are you sure you want to delete this product?')) {
-        fetch('delete_product.php', {
+        fetch('../backend/delete_product.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })

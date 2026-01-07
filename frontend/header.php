@@ -1,10 +1,10 @@
 <?php
-require_once 'functions.php';
-$lang_file = getLanguage() . '.php';
+require_once __DIR__ . '/../backend/functions.php';
+$lang_file = __DIR__ . '/' . getLanguage() . '.php';
 if (file_exists($lang_file)) {
     require_once $lang_file;
 } else {
-    require_once 'en.php';
+    require_once __DIR__ . '/en.php';
 }
 ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ if (file_exists($lang_file)) {
                 <a href="profile.php" class="glass p-2 rounded-lg hover:scale-105 transition-transform">
                     <?php echo translate('profile'); ?>
                 </a>
-                <a href="logout.php" class="glass p-2 rounded-lg hover:scale-105 transition-transform">
+                <a href="../backend/logout.php" class="glass p-2 rounded-lg hover:scale-105 transition-transform">
                     <?php echo translate('logout'); ?>
                 </a>
             <?php else: ?>
