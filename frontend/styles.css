@@ -45,7 +45,7 @@ body {
 }
 
 .hero-bg-image {
-    background-image: url('../assets/images/image copy.png');
+    background-image: url('image copy.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
