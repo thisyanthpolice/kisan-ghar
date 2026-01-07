@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 // Show single health box if ID is provided
 if (isset($_GET['id'])) {
@@ -43,7 +43,6 @@ if (isset($_GET['id'])) {
         echo '<div class="container mx-auto p-4"><div class="glass p-8 text-center">Health box not found</div></div>';
     endif;
     require_once 'footer.php';
-    require_once 'sidebar.php';
     return;
 }
 
@@ -74,4 +73,3 @@ $health_boxes = $stmt->fetchAll();
 </div>
 
 <?php require_once 'footer.php';
-require_once 'sidebar.php';
