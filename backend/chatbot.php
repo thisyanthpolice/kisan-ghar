@@ -1,5 +1,5 @@
 <?php
-require_once 'header.php';
+require_once __DIR__ . '/../frontend/header.php';
 ?>
 
 <div class="container mx-auto p-4">
@@ -33,5 +33,4 @@ async function sendMessage() {
 }
 </script>
 
-<?php require_once 'footer.php';
-require_once 'sidebar.php'; ?>
+<?php require_once __DIR__ . '/../frontend/footer.php'; ?>

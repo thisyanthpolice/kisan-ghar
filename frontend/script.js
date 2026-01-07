@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!id || !type) return;
         const qty = document.getElementById(`qty-${id}`)?.value || 1;
         try {
-            const response = await fetch('add_to_cart.php', {
+            const response = await fetch('../backend/add_to_cart.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id, type, quantity: parseInt(qty) })
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addToFavorites = async function(id, type) {
         if (!id || !type) return;
         try {
-            const response = await fetch('add_to_favorites.php', {
+            const response = await fetch('../backend/add_to_favorites.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id, type })

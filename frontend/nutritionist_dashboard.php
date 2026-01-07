@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 // Strict role check
 if (!isLoggedIn() || getUserRole() !== 'nutritionist') {
@@ -127,7 +127,7 @@ if (healthBoxForm) {
             price: document.getElementById('price').value
         };
         try {
-            const url = editId ? 'edit_health_box_ajax.php' : 'add_health_box_ajax.php';
+            const url = editId ? '../backend/edit_health_box_ajax.php' : '../backend/add_health_box_ajax.php';
             const res = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -155,7 +155,7 @@ function editHealthBox(box) {
 }
 function deleteHealthBox(id) {
     if (confirm('Are you sure you want to delete this health box?')) {
-        fetch('delete_health_box.php', {
+        fetch('../backend/delete_health_box.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })

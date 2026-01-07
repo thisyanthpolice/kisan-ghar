@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 // Strict role check
 if (!isLoggedIn() || getUserRole() !== 'admin') {
@@ -217,7 +217,7 @@ function cancelEdit(formId) {
 
 function deleteProduct(id) {
     if (confirm('<?php echo translate('confirm_delete'); ?>')) {
-        fetch('delete_product.php', {
+        fetch('../backend/delete_product.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })
@@ -227,7 +227,7 @@ function deleteProduct(id) {
 
 function deleteHealthBox(id) {
     if (confirm('<?php echo translate('confirm_delete'); ?>')) {
-        fetch('delete_health_box.php', {
+        fetch('../backend/delete_health_box.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })
@@ -237,7 +237,7 @@ function deleteHealthBox(id) {
 
 function deleteUser(id) {
     if (confirm('<?php echo translate('confirm_delete'); ?>')) {
-        fetch('delete_user.php', {
+        fetch('../backend/delete_user.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })
