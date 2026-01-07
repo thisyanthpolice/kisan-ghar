@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 $user_id = $_GET['id'];
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ? AND role IN ('farmer', 'nutritionist')");
@@ -23,4 +23,3 @@ if (!$profile) {
 </div>
 
 <?php require_once 'footer.php'; ?>
-<?php require_once 'sidebar.php'; ?>

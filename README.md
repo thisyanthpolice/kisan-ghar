@@ -40,10 +40,3 @@ Kisan Ghar is a platform designed to bridge the gap between local farmers and in
 4. Place the project files into the `htdocs` directory (or your server’s document root).
 5. Start Apache and MySQL from XAMPP.
 6. Access the application through your browser at: `http://localhost/your-folder-name/`
-
----
-
-## 🌐 Live Website
-
-Access the live version here:  
-👉 [kisan ghar](http://kisan-ghar.iceiy.com/)

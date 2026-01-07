@@ -1,6 +1,6 @@
 <?php
 require_once 'header.php';
-require_once 'db_connect.php';
+require_once __DIR__ . '/../backend/db_connect.php';
 
 if (!isLoggedIn()) {
     header('Location: login.php');
@@ -39,4 +39,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <?php require_once 'footer.php'; ?>
-<?php require_once 'sidebar.php'; ?>
